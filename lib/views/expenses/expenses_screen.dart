@@ -18,7 +18,7 @@ class ExpensesScreen extends StatelessWidget {
           children: [
             CustomAppTabBar(tabs: ['Weekly', 'Monthly', 'Yearly', 'All Time']),
             TotalExpensesText(),
-            // LastWeekExpense(),
+            LastWeekExpense(),
             HomeTransactionsLog(),
           ],
         ),

@@ -74,7 +74,7 @@ class LastWeekExpense extends StatelessWidget {
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: [
                   const Icon(
-                    Iconsax.arrow_up_2,
+                    Iconsax.trend_up,
                     color: Colors.red,
                     size: 18,
                   ),
