@@ -23,5 +23,6 @@ Welcome to the Flutter Finance Management App! This app helps you manage your fi
 To run this project, ensure you have Flutter installed on your machine. If not, you can download it from the [official Flutter website](https://flutter.dev).
 
 1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/flutter-finance-management-app.git
+   ```bash git clone https://github.com/HossamAElsayed/finance_management_app.git
+
+2.Navigate to the project directory:
