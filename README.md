@@ -25,7 +25,7 @@ To run this project, ensure you have Flutter installed on your machine. If not, 
 1. Clone this repository:
 ```bash 
    git clone https://github.com/HossamAElsayed/finance_management_app.git
-
+'''
 2.Navigate to the project directory:
 ```bash
    cd flutter-finance-management-app
