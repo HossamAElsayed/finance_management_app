@@ -9,7 +9,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+        elevation: 0,
         centerTitle: true,
+        forceMaterialTransparency: true,
+        foregroundColor: Colors.transparent,
         leading: const Icon(
           Iconsax.arrow_left_2,
           size: 26,

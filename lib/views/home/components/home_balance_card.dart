@@ -1,4 +1,4 @@
-import 'package:finance_management_app/views/components/CustomAppDot.dart';
+import 'package:finance_management_app/views/modules/CustomAppDot.dart';
 import 'package:flutter/material.dart';
 
 class HomeBalanceCard extends StatelessWidget {

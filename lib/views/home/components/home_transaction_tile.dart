@@ -1,7 +1,7 @@
+import 'package:finance_management_app/views/modules/IconWithCircle.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:finance_management_app/models/transaction.dart';
-import 'package:finance_management_app/views/components/IconWithCircle.dart';
 
 class HomeTransactionTile extends StatelessWidget {
   final Transaction transaction;

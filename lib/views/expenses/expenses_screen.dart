@@ -1,7 +1,7 @@
-import 'package:finance_management_app/views/components/CustomAppBar.dart';
-import 'package:finance_management_app/views/components/CustomAppTabBar.dart';
 import 'package:finance_management_app/views/expenses/components/total_expenses_chart.dart';
 import 'package:finance_management_app/views/expenses/components/total_expenses_text.dart';
+import 'package:finance_management_app/views/modules/CustomAppBar.dart';
+import 'package:finance_management_app/views/modules/CustomAppTabBar.dart';
 import 'package:flutter/material.dart';
 
 import '../home/components/home_transactions_log.dart';

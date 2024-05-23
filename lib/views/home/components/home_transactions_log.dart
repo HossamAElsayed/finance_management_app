@@ -1,6 +1,6 @@
 import 'package:finance_management_app/models/transaction.dart';
-import 'package:finance_management_app/views/components/CustomAppTitle.dart';
 import 'package:finance_management_app/views/home/components/home_transaction_tile.dart';
+import 'package:finance_management_app/views/modules/CustomAppTitle.dart';
 import 'package:flutter/material.dart';
 
 class HomeTransactionsLog extends StatelessWidget {

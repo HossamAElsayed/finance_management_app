@@ -1,13 +1,27 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
-class AppTheme {
+class ThemeModel extends ChangeNotifier {
+  ThemeData _currentTheme = AppTheme.lightTheme;
+
+  ThemeData get currentTheme => _currentTheme;
+
+  bool get isDark => _currentTheme == AppTheme.lightTheme;
+
+  void setTheme(ThemeData theme) {
+    _currentTheme = theme;
+    notifyListeners();
+  }
+}
+
+class AppTheme extends Equatable {
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
       primaryColor: Colors.blue,
       colorScheme: const ColorScheme.light(
         primary: Colors.blue,
-        secondary: Colors.blueAccent,
+        secondary: Colors.black87,
       ),
       scaffoldBackgroundColor: Colors.white,
       appBarTheme: const AppBarTheme(
@@ -90,4 +104,8 @@ class AppTheme {
     labelLarge: TextStyle(
         color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
   );
+
+  @override
+  List<Object?> get props =>
+      [lightTheme, darkTheme, _lightTextTheme, _darkTextTheme];
 }
