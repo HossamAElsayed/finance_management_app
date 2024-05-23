@@ -1,5 +1,4 @@
 import 'package:finance_management_app/views/constants/theme.dart';
-import 'package:finance_management_app/views/modules/CustomAppBar.dart';
 import 'package:finance_management_app/views/settings/components/setting_option_tile.dart';
 import 'package:finance_management_app/views/settings/components/settings_header.dart';
 import 'package:flutter/material.dart';

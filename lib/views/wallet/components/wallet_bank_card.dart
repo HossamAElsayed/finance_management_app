@@ -1,7 +1,5 @@
 import 'package:finance_management_app/models/card.dart';
-import 'package:finance_management_app/views/constants/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class BankCard extends StatefulWidget {
   final CardModel card;
