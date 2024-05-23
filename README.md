@@ -91,3 +91,5 @@ This app uses the following Flutter packages:
 
 ```fl_chart``` for displaying bar charts and line chart
 
+# Note: This Application is still Under Development.
+
