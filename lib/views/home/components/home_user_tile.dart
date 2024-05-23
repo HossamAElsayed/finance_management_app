@@ -12,18 +12,19 @@ class HomeUserTile extends StatelessWidget {
 
       leading: CircleAvatar(
         radius: 30,
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         backgroundImage: NetworkImage(currentUser.image),
       ),
-      title: const Text(
+      title: Text(
         "Welcome Back",
-        style: TextStyle(
-            color: Colors.white, fontSize: 12, fontWeight: FontWeight.w300),
+        style: Theme.of(context).textTheme.labelLarge,
       ),
       subtitle: Text(
         currentUser.name,
-        style: const TextStyle(
-            color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        style: Theme.of(context)
+            .textTheme
+            .displayMedium!
+            .copyWith(color: Colors.white),
       ),
       trailing: const CustomNotificationIcon(),
     );
@@ -38,10 +39,10 @@ class CustomNotificationIcon extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        const Icon(
+        Icon(
           Iconsax.notification,
           size: 25,
-          color: Colors.white,
+          color: Theme.of(context).scaffoldBackgroundColor,
         ),
         Positioned(
           right: 3,
@@ -56,14 +57,6 @@ class CustomNotificationIcon extends StatelessWidget {
               minWidth: 8,
               minHeight: 8,
             ),
-            // child: Text(
-            //   '3',
-            //   style: TextStyle(
-            //     color: Colors.white,
-            //     fontSize: 12,
-            //   ),
-            //   textAlign: TextAlign.center,
-            // ),
           ),
         ),
       ],

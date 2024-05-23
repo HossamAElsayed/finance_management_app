@@ -42,12 +42,20 @@ class Transaction extends Equatable {
 }
 
 List<Transaction> lastTransactions = [
-  Transaction(TransactionCategory.CashFromATM, 240, DateTime(2024)),
-  Transaction(TransactionCategory.Online, 120, DateTime.now()),
-  Transaction(TransactionCategory.Resturant, 400, DateTime(2021)),
-  Transaction(TransactionCategory.Resturant, 400, DateTime(2021)),
-  Transaction(TransactionCategory.Resturant, 400, DateTime(2021)),
-  Transaction(TransactionCategory.Resturant, 400, DateTime(2021)),
-  Transaction(TransactionCategory.Resturant, 400, DateTime(2021)),
-  Transaction(TransactionCategory.Resturant, 400, DateTime(2021)),
+  Transaction(TransactionCategory.CashFromATM, 240,
+      DateTime(2023, 6, 12, 7, 45, 32, 123)),
+  Transaction(
+      TransactionCategory.Online, 120, DateTime(2024, 9, 18, 14, 28, 47, 456)),
+  Transaction(TransactionCategory.Resturant, 400,
+      DateTime(2022, 12, 5, 22, 37, 59, 789)),
+  Transaction(TransactionCategory.Resturant, 400,
+      DateTime(2024, 3, 22, 8, 15, 10, 321)),
+  Transaction(TransactionCategory.Resturant, 400,
+      DateTime(2023, 11, 9, 19, 50, 22, 654)),
+  Transaction(TransactionCategory.Resturant, 400,
+      DateTime(2023, 4, 27, 16, 25, 44, 210)),
+  Transaction(TransactionCategory.Resturant, 400,
+      DateTime(2023, 8, 2, 10, 42, 55, 543)),
+  Transaction(TransactionCategory.Resturant, 400,
+      DateTime(2023, 12, 25, 5, 14, 12, 109)),
 ];

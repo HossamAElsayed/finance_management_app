@@ -1,5 +1,6 @@
 import 'package:finance_management_app/views/components/CustomAppBar.dart';
 import 'package:finance_management_app/views/components/CustomAppTabBar.dart';
+import 'package:finance_management_app/views/expenses/components/total_expenses_chart.dart';
 import 'package:finance_management_app/views/expenses/components/total_expenses_text.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,7 @@ class ExpensesScreen extends StatelessWidget {
           children: [
             CustomAppTabBar(tabs: ['Weekly', 'Monthly', 'Yearly', 'All Time']),
             TotalExpensesText(),
+            TotalExpensesChart(),
             LastWeekExpense(),
             HomeTransactionsLog(),
           ],

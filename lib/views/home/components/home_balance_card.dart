@@ -82,7 +82,7 @@ class CustomMonthlyInfoTile extends StatelessWidget {
             spacing: 8,
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
-              CustomAppDot(dotSize: dotSize, dotColor: dotColor),
+              CustomAppDot(size: dotSize, color: dotColor),
               Text(
                 title,
                 style: const TextStyle(
@@ -102,22 +102,5 @@ class CustomMonthlyInfoTile extends StatelessWidget {
         ],
       ),
     );
-    // return ListTile(
-    //   horizontalTitleGap: 0,
-    //   contentPadding: EdgeInsets.only(left: 0.0, right: 0.0),
-    //   leading: CustomAppDot(dotSize: dotSize, dotColor: dotColor),
-    //   title: Text(
-    //     title,
-    //     style: const TextStyle(
-    //         fontSize: 15, fontWeight: FontWeight.w300, color: Colors.white),
-    //   ),
-    //   trailing: Text(
-    //     '${money > 0 ? "+" : "-"}\$${money.abs().toStringAsFixed(2)}',
-    //     style: const TextStyle(
-    //       fontSize: 15,
-    //       color: Colors.white,
-    //     ),
-    //   ),
-    // );
   }
 }

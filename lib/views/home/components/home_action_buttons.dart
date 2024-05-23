@@ -52,6 +52,16 @@ class CustomHomeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: foregroundColor,
+        backgroundColor: backgroundColor,
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5)
+            .copyWith(right: 18),
+        side: const BorderSide(
+          color: Colors.grey,
+        ),
+      ),
+      onPressed: () {},
       child: Wrap(
         spacing: 5,
         crossAxisAlignment: WrapCrossAlignment.center,
@@ -60,16 +70,6 @@ class CustomHomeButton extends StatelessWidget {
           Text(title),
         ],
       ),
-      style: OutlinedButton.styleFrom(
-        foregroundColor: foregroundColor,
-        backgroundColor: backgroundColor,
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5)
-            .copyWith(right: 18),
-        side: BorderSide(
-          color: Colors.grey,
-        ),
-      ),
-      onPressed: () {},
     );
   }
 }

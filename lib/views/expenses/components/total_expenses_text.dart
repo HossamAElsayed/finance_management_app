@@ -1,3 +1,4 @@
+import 'package:finance_management_app/views/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class TotalExpensesText extends StatelessWidget {
@@ -5,19 +6,18 @@ class TotalExpensesText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 12.0),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 24.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            '\$1000.00',
-            style: TextStyle(fontSize: 28.0),
+            '\$${expenses.reduce((a, b) => a + b).toStringAsFixed(3)}',
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           Text(
             'Total Expenses',
-            style: TextStyle(
-                color: Colors.grey, fontSize: 12, fontWeight: FontWeight.w500),
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ],
       ),

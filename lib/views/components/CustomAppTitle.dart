@@ -8,20 +8,28 @@ class CustomAppTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        contentPadding: EdgeInsets.zero,
-        title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 18),
-          child: Text(
-            title,
-            style: const TextStyle(color: Colors.black, fontSize: 18),
-          ),
+      contentPadding: EdgeInsets.zero,
+      title: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18),
+        child: Text(
+          title,
+          style: Theme.of(context)
+              .textTheme
+              .bodyLarge
+              ?.copyWith(fontWeight: FontWeight.bold),
         ),
-        trailing: MaterialButton(
-          onPressed: () {},
-          child: Text(
-            'View All',
-            style: TextStyle(color: Colors.grey, fontSize: 12),
-          ),
-        ));
+      ),
+      trailing: TextButton(
+        onPressed: () {
+          // Handle button press
+        },
+        child: Text(
+          'View All',
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                color: Colors.blue,
+              ),
+        ),
+      ),
+    );
   }
 }

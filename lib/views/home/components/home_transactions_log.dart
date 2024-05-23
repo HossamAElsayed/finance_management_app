@@ -14,15 +14,16 @@ class HomeTransactionsLog extends StatelessWidget {
       children: [
         const CustomAppTitle(title: 'Transactions'),
         ListView.separated(
-            shrinkWrap: true,
-            padding: EdgeInsets.zero,
-            itemCount: lastTransactions.length,
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (BuildContext context, int index) {
-              return HomeTransactionTile(transaction: lastTransactions[index]);
-            },
-            separatorBuilder: (BuildContext context, int index) =>
-                const Divider()),
+          shrinkWrap: true,
+          padding: EdgeInsets.zero,
+          itemCount: lastTransactions.length,
+          physics: const NeverScrollableScrollPhysics(),
+          itemBuilder: (BuildContext context, int index) {
+            return HomeTransactionTile(transaction: lastTransactions[index]);
+          },
+          separatorBuilder: (BuildContext context, int index) =>
+              const Divider(),
+        ),
       ],
     );
   }

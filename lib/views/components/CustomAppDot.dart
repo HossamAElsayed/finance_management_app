@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 
 class CustomAppDot extends StatelessWidget {
-  final double dotSize;
-  final Color dotColor;
+  final Color color;
+  final double size;
 
   const CustomAppDot({
-    required this.dotSize,
-    required this.dotColor,
     super.key,
+    required this.color,
+    this.size = 10,
   });
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: dotSize,
-      backgroundColor: dotColor,
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        color: color,
+        shape: BoxShape.circle,
+      ),
     );
   }
 }
