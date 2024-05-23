@@ -14,11 +14,13 @@ expenses, and managing your settings.
 - **Settings Screen**: Allows users to change the app theme and update their password.
 
 ## Screenshots
+| Home Screen | Wallet Screen |
+| --- | --- |
+| <img src="assets/sc/home_screen.jpg" width="400" height="790"> | <img src="assets/sc/wallet_screen.jpg" width="400" height="790"> |
 
-![Home Screen](assets/sc/home_screen.jpg)
-![Wallet Screen](assets/sc/wallet_screen.jpg)
-![Expenses Screen](assets/sc/expenes_screen.jpg)
-![Settings Screen](assets/sc/settings_screen.jpg)
+| Expenses Screen | Settings Screen |
+| --- | --- |
+| <img src="assets/sc/expenes_screen.jpg" width="400" height="790"> | <img src="assets/sc/settings_screen.jpg" width="400" height="790"> |
 
 ## Installation
 
