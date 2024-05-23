@@ -1,16 +1,27 @@
-# finance_management_app
+# Flutter Finance Management App
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+Welcome to the Flutter Finance Management App! This app helps you manage your finances efficiently by providing an easy-to-use interface for tracking your balance, viewing transactions, monitoring expenses, and managing your settings.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Home Page**: Displays the total balance and the last transactions.
+- **Wallet Screen**: Shows connected bank cards.
+- **Expenses Screen**: Displays expenses using a bar chart and shows last week's expense changes.
+- **Settings Screen**: Allows users to change the app theme and update their password.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Home Screen](path-to-home-screen-screenshot)
+![Wallet Screen](path-to-wallet-screen-screenshot)
+![Expenses Screen](path-to-expenses-screen-screenshot)
+![Settings Screen](path-to-settings-screen-screenshot)
+
+## Installation
+
+To run this project, ensure you have Flutter installed on your machine. If not, you can download it from the [official Flutter website](https://flutter.dev).
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/flutter-finance-management-app.git
