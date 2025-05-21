@@ -1,8 +1,9 @@
-import 'package:finance_management_app/views/constants/theme.dart';
-import 'package:finance_management_app/views/expenses/expenses_screen.dart';
-import 'package:finance_management_app/views/home/home_screen.dart';
-import 'package:finance_management_app/views/settings/settings_screen.dart';
-import 'package:finance_management_app/views/wallet/wallet_screen.dart';
+import 'package:finance_management_app/core/theme/app_theme.dart';
+import 'package:finance_management_app/core/theme/theme_export.dart';
+import 'package:finance_management_app/modules/expenses/ui/expenses_screen.dart';
+import 'package:finance_management_app/modules/home/ui/home_screen.dart';
+import 'package:finance_management_app/modules/settings/ui/settings_screen.dart';
+import 'package:finance_management_app/modules/wallet/ui/wallet_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
