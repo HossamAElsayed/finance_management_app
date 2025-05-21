@@ -6,11 +6,8 @@ import 'package:finance_management_app/modules/settings/ui/settings_screen.dart'
 import 'package:finance_management_app/modules/wallet/ui/wallet_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
-// Use a ValueNotifier for theme switching
-final ValueNotifier<ThemeMode> themeModeNotifier = ValueNotifier(
-  ThemeMode.light,
-);
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'core/theme/theme_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,17 +18,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder<ThemeMode>(
-      valueListenable: themeModeNotifier,
-      builder: (context, mode, _) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: AppTheme.light,
-          darkTheme: AppTheme.dark,
-          themeMode: mode,
-          home: const BottomNavBar(),
-        );
-      },
+    return BlocProvider(
+      create: (_) => ThemeCubit(),
+      child: BlocBuilder<ThemeCubit, ThemeMode>(
+        builder: (context, mode) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: AppTheme.light,
+            darkTheme: AppTheme.dark,
+            themeMode: mode,
+            home: const BottomNavBar(),
+          );
+        },
+      ),
     );
   }
 }

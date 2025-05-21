@@ -2,6 +2,7 @@ import 'package:finance_management_app/modules/home/ui/components/transaction_de
 import 'package:finance_management_app/shared/widgets/icon_with_circle.dart';
 import 'package:flutter/material.dart';
 import 'package:finance_management_app/models/transaction.dart';
+import 'package:finance_management_app/core/theme/app_theme.dart';
 import 'dart:ui';
 
 class HomeTransactionTile extends StatelessWidget {
@@ -11,6 +12,7 @@ class HomeTransactionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final premiumTheme = Theme.of(context).extension<PremiumTheme>()!;
     final categoryColor = _getCategoryColor(transaction.category);
     final statusColor = _getStatusColor(transaction.status);
     final amountStr = _formatAmount(transaction.amount);
@@ -24,11 +26,11 @@ class HomeTransactionTile extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
         decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
+          color: premiumTheme.card,
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: premiumTheme.accent.withValues(alpha: 0.05),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -53,8 +55,8 @@ class HomeTransactionTile extends StatelessWidget {
                       TransactionDetailBottomSheet(transaction: transaction),
                 );
               },
-              splashColor: categoryColor.withOpacity(0.1),
-              highlightColor: categoryColor.withOpacity(0.05),
+              splashColor: categoryColor.withValues(alpha: 0.1),
+              highlightColor: categoryColor.withValues(alpha: 0.05),
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                 child: Row(
@@ -62,7 +64,7 @@ class HomeTransactionTile extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: categoryColor.withOpacity(0.12),
+                        color: categoryColor.withValues(alpha: 0.12),
                       ),
                       child: IconWithCircle(
                         icon: Icon(
@@ -87,6 +89,7 @@ class HomeTransactionTile extends StatelessWidget {
                                 ?.copyWith(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 16,
+                                  color: premiumTheme.accent,
                                 ),
                           ),
                           const SizedBox(height: 2),
@@ -94,7 +97,9 @@ class HomeTransactionTile extends StatelessWidget {
                             subtitle,
                             style: Theme.of(context).textTheme.bodySmall
                                 ?.copyWith(
-                                  color: Colors.grey.shade600,
+                                  color: premiumTheme.accent.withValues(
+                                    alpha: 0.6,
+                                  ),
                                   fontWeight: FontWeight.w500,
                                 ),
                           ),
@@ -111,7 +116,7 @@ class HomeTransactionTile extends StatelessWidget {
                           style: Theme.of(context).textTheme.titleMedium
                               ?.copyWith(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.black,
+                                color: premiumTheme.accent,
                                 fontSize: 16,
                               ),
                         ),

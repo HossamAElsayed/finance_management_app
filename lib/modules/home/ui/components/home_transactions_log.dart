@@ -2,6 +2,7 @@ import 'package:finance_management_app/models/transaction.dart';
 import 'package:finance_management_app/modules/home/ui/components/home_transaction_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:finance_management_app/core/theme/app_theme.dart';
 import '../../logic/transactions_bloc.dart';
 
 class HomeTransactionsLog extends StatelessWidget {
@@ -43,7 +44,12 @@ class HomeTransactionsLog extends StatelessWidget {
                                 i == 0,
                               ),
                               style: Theme.of(context).textTheme.titleMedium
-                                  ?.copyWith(fontWeight: FontWeight.bold),
+                                  ?.copyWith(
+                                    fontWeight: FontWeight.bold,
+                                    color: Theme.of(
+                                      context,
+                                    ).extension<PremiumTheme>()!.accent,
+                                  ),
                             ),
                           ),
                           ...((group['items'] as List<Transaction>)
@@ -67,6 +73,7 @@ class HomeTransactionsLog extends StatelessWidget {
   }
 
   Widget _buildHeader(BuildContext context) {
+    final premiumTheme = Theme.of(context).extension<PremiumTheme>()!;
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
@@ -77,12 +84,12 @@ class HomeTransactionsLog extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
+                  color: premiumTheme.accent.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
                   Icons.receipt_long,
-                  color: Theme.of(context).primaryColor,
+                  color: premiumTheme.accent,
                   size: 20,
                 ),
               ),
@@ -92,6 +99,7 @@ class HomeTransactionsLog extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.bold,
                   letterSpacing: 0.3,
+                  color: premiumTheme.accent,
                 ),
               ),
             ],
@@ -100,10 +108,17 @@ class HomeTransactionsLog extends StatelessWidget {
             onPressed: () {
               // Handle view all transactions
             },
-            icon: const Icon(Icons.arrow_forward, size: 16),
-            label: const Text('View All'),
+            icon: Icon(
+              Icons.arrow_forward,
+              size: 16,
+              color: premiumTheme.accent,
+            ),
+            label: Text(
+              'View All',
+              style: TextStyle(color: premiumTheme.accent),
+            ),
             style: TextButton.styleFrom(
-              foregroundColor: Theme.of(context).primaryColor,
+              foregroundColor: premiumTheme.accent,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -116,6 +131,7 @@ class HomeTransactionsLog extends StatelessWidget {
   }
 
   Widget _buildEmptyState(BuildContext context) {
+    final premiumTheme = Theme.of(context).extension<PremiumTheme>()!;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 32),
       child: Column(
@@ -123,22 +139,22 @@ class HomeTransactionsLog extends StatelessWidget {
           Icon(
             Icons.receipt_long,
             size: 48,
-            color: Colors.grey.withValues(alpha: 0.5),
+            color: premiumTheme.accent.withValues(alpha: 0.3),
           ),
           const SizedBox(height: 16),
           Text(
             'No transactions yet',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-              color: Colors.grey.shade600,
+              color: premiumTheme.accent.withValues(alpha: 0.7),
               fontWeight: FontWeight.w500,
             ),
           ),
           const SizedBox(height: 8),
           Text(
             'Your recent transactions will appear here',
-            style: Theme.of(
-              context,
-            ).textTheme.bodySmall?.copyWith(color: Colors.grey.shade500),
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: premiumTheme.accent.withValues(alpha: 0.5),
+            ),
             textAlign: TextAlign.center,
           ),
         ],
